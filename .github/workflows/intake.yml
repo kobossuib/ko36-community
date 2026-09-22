@@ -1,0 +1,21 @@
+name: Intake
+on:
+  issues:
+    types: [opened, reopened]
+permissions:
+  contents: read
+  issues: write
+concurrency:
+  group: intake-${{ github.event.issue.number }}
+  cancel-in-progress: false
+jobs:
+  classify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Register report
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/intake.mjs

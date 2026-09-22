@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ko36-feedback",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-09-21",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {"directory": "public", "binding": "ASSETS", "run_worker_first": ["/api/*"]},
+  "routes": [{"pattern":"feedback.getko36.com", "custom_domain":true}],
+  "d1_databases": [{"binding":"DB", "database_name":"ko36-feedback", "database_id":"e8b80bf8-5e48-41b9-9f2a-3d3d325965fe", "migrations_dir":"migrations"}],
+  "vars": {"GITHUB_REPO":"kobossuib/ko36-community", "TURNSTILE_SITE_KEY":"0x4AAAAAAE_DsE1HtPl7y2na", "FORM_ENABLED":"true", "IP_LIMIT":"5", "GLOBAL_LIMIT":"100"},
+  "observability": {"enabled":true, "head_sampling_rate":0.1}
+}

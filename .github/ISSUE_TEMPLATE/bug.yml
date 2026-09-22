@@ -1,0 +1,45 @@
+name: Bug / Fallo
+description: Report a reproducible problem / Cuéntanos qué falla
+title: "[Bug] "
+labels: ["type:bug", "status:incoming", "source:github"]
+body:
+  - type: markdown
+    attributes:
+      value: "Public report. No passwords, personal data or full logs. / Reporte público: sin datos privados."
+  - type: input
+    id: version
+    attributes:
+      label: Version / Versión
+      placeholder: "KO-36 / Companion version, or unknown / no lo sé"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area / Área
+      options: [Firmware, Companion, USB, Documentation, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps / Pasos
+      description: "What did you do? / ¿Qué hiciste?"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected / Qué esperabas
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Observed / Qué ocurrió
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence links / Enlaces de capturas o vídeo

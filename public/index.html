@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Reporta un fallo o propón una mejora para KO-36. Sin cuenta de GitHub.">
+  <title>KO-36 · Community</title><link rel="stylesheet" href="/styles.css">
+  <script src="/form.js" defer></script>
+</head>
+<body>
+  <header><a href="https://getko36.com" class="wordmark">KO–36<span>COMMUNITY</span></a><button id="language" type="button" aria-label="Switch language">English</button></header>
+  <main>
+    <section class="intro"><p class="eyebrow" data-es="HECHO PARA TOCAR. MEJORADO CONTIGO." data-en="MADE TO PLAY. BETTER WITH YOU.">HECHO PARA TOCAR. MEJORADO CONTIGO.</p>
+    <h1 data-es="Tu próxima idea empieza aquí." data-en="Your next idea starts here.">Tu próxima idea empieza aquí.</h1>
+    <p data-es="¿Algo falla? ¿Tienes una mejora en mente? Cuéntanos y sigue su recorrido hasta la próxima versión." data-en="Found a bug? Have an improvement in mind? Tell us and follow its progress to a future release.">¿Algo falla? ¿Tienes una mejora en mente? Cuéntanos y sigue su recorrido hasta la próxima versión.</p>
+    <a class="browse" href="https://github.com/kobossuib/ko36-community/issues" data-es="Ver reportes y propuestas ↗" data-en="Browse reports and proposals ↗">Ver reportes y propuestas ↗</a></section>
+    <section class="panel" aria-label="Feedback">
+      <div id="notice" role="status" aria-live="polite"></div>
+      <form id="report">
+        <fieldset id="fields" disabled>
+          <legend class="sr-only" data-es="Tu reporte" data-en="Your report">Tu reporte</legend>
+          <div class="pair"><label><span data-es="Quiero…" data-en="I want to…">Quiero…</span><select name="kind"><option value="bug" data-es="Reportar un fallo" data-en="Report a bug">Reportar un fallo</option><option value="proposal" data-es="Proponer una mejora" data-en="Suggest an improvement">Proponer una mejora</option></select></label>
+          <label><span data-es="Dónde" data-en="Area">Dónde</span><select name="area"><option value="firmware">KO-36</option><option value="companion">Companion</option><option value="usb">USB</option><option value="docs" data-es="Documentación / web" data-en="Documentation / web">Documentación / web</option><option value="other" data-es="Otro / no lo sé" data-en="Other / unknown">Otro / no lo sé</option></select></label></div>
+          <label><span data-es="En una frase" data-en="In one sentence">En una frase</span><input name="title" required maxlength="120" autocomplete="off"></label>
+          <label><span data-es="Cuéntanos los detalles" data-en="Tell us the details">Cuéntanos los detalles</span><textarea name="description" rows="7" required maxlength="8000" aria-describedby="description-help"></textarea><small id="description-help" data-es="Fallo: pasos, qué esperabas y qué ocurrió. Idea: qué quieres hacer y cómo te ayudaría el cambio." data-en="Bug: steps, expected and actual behavior. Idea: what you want to do and how the change would help.">Fallo: pasos, qué esperabas y qué ocurrió. Idea: qué quieres hacer y cómo te ayudaría el cambio.</small></label>
+          <label><span data-es="Versión de KO-36 / Companion" data-en="KO-36 / Companion version">Versión de KO-36 / Companion</span><input name="version" required maxlength="80" value="No lo sé / Unknown"></label>
+          <label><span data-es="Capturas o vídeo (opcional)" data-en="Screenshots or video (optional)">Capturas o vídeo (opcional)</span><textarea name="links" rows="2" maxlength="6144" aria-describedby="links-help"></textarea><small id="links-help" data-es="Hasta 3 enlaces HTTPS, uno por línea. No subas proyectos privados ni logs completos." data-en="Up to 3 HTTPS links, one per line. No private projects or full logs.">Hasta 3 enlaces HTTPS, uno por línea. No subas proyectos privados ni logs completos.</small></label>
+          <label class="consent"><input name="consentPublic" type="checkbox" required><span data-es="Entiendo que el reporte será público en GitHub. No he incluido datos personales ni secretos." data-en="I understand this report will be public on GitHub. I have not included personal data or secrets.">Entiendo que el reporte será público en GitHub. No he incluido datos personales ni secretos.</span></label>
+          <div id="challenge"></div>
+          <button class="submit" id="send" type="submit" data-es="Enviar reporte ↗" data-en="Send report ↗">Enviar reporte ↗</button>
+        </fieldset>
+      </form>
+      <div id="result" role="status" aria-live="polite" tabindex="-1"></div>
+      <noscript>JavaScript is needed for this form. <a href="https://github.com/kobossuib/ko36-community/issues/new/choose">Use GitHub Issues</a>.</noscript>
+    </section>
+    <aside><span>01 · INTAKE</span><span>02 · BUILD</span><span>03 · TEST</span><span>04 · RELEASE</span></aside>
+    <p class="footnote" data-es="Cada reporte entra en revisión. Los cambios se priorizan y prueban antes de publicarse; enviar una idea no garantiza su implementación. No pedimos email. Guarda el enlace para consultar su estado." data-en="Every report enters review. Changes are prioritized and tested before release; submitting an idea does not guarantee implementation. No email required. Save your link to follow progress.">Cada reporte entra en revisión. Los cambios se priorizan y prueban antes de publicarse; enviar una idea no garantiza su implementación. No pedimos email. Guarda el enlace para consultar su estado.</p>
+  </main>
+  <footer><a href="https://github.com/kobossuib/ko36-community">GitHub ↗</a><a href="https://github.com/kobossuib/ko36-community/security/advisories/new" data-es="Reportar vulnerabilidad en privado" data-en="Report a vulnerability privately">Reportar vulnerabilidad en privado</a></footer>
+</body></html>

@@ -1,0 +1,22 @@
+name: Idea / Mejora
+description: Suggest a change / Propón un cambio
+title: "[Idea] "
+labels: ["type:proposal", "status:incoming", "source:github"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and context / Problema y contexto
+      description: "Which musical task would this help? / ¿Para qué lo usarías?"
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change / Cambio propuesto
+    validations:
+      required: true
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Current workaround / Cómo lo resuelves ahora
